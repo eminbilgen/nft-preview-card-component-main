@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Netlify Deploy](https://peppy-swan-581aa0.netlify.app/)
+- Live Site URL: [Netlify Deploy](https://beautiful-entremet-7efdbe.netlify.app/)
 
 ## My process
 
