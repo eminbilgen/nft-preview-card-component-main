@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
 body{
     margin: 0;
     --Soft-blue: hsl(215, 51%, 70%);
@@ -13,22 +14,21 @@ body{
     justify-content: center;
     align-items: center;
 }
+*{margin: 0;}
 main{
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    max-height: 600px;
+    width: 25rem;
+    height: 42rem;
     background-color: var(--White);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: var(--medium-dark-blue);
 }
 .card{
     width: 90%;
-    height: 90%;
+    height: 93.5%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -36,22 +36,200 @@ main{
 }
 .cardimage{
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: 90%;
+    width: 100%;
+    max-height: 60%;
 }
 .cardimage img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    display: block;
 }
-.big-info{
+.cardimage:hover {
+    cursor: pointer;
+}
+.cardimage:hover .overlay {
+    opacity: .5;
+}
+.cardimage:hover .view{
+    opacity: 1;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
     width: 100%;
-    height: 10%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--Cyan);
+    border-radius: 10px;
+}
+.cardimage .view{
+    position: absolute;
+    opacity: 0;
+    transition: .5s ease;
+    width: 3rem;
+    height: 3rem;
+}
+.big-inf{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-family: 'Outfit', sans-serif;
+}
+.artistname{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--White);
+    height: 25%;
+}
+.artistname:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.desc{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--Soft-blue);
+    height: 25%;
+}
+.info{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--White);
+    height: 25%;
 }
+.price{
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--Cyan);
+}
+.days{
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--Soft-blue);
+}
+.price img{
+    width: 15px;
+    height: 25px;
+}
+.days img{
+    width: 25px;
+    height: 25px;
+}
+.line{
+    width: 100%;
+    height: 1.1rem;
+    border-top: 1px solid var(--little-dark-blue);
+}
+.cardfooter{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--Soft-blue);
+}
+.cardfooter a{
+    text-decoration: none;
+    color: var(--White);
+}
+.cardfooter a:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.cardfooter p{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgspace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
 
+}
+.cardfooter img{
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+@media screen and (max-width: 768px){
+    main{
+        width: 20rem;
+        height: 35rem;
+    }
+    .cardimage{
+        max-height: 55%;
+    }
+    .cardimage img{
+        border-radius: 10px;
+    }
+    .cardimage .view{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .big-inf{
+        height: 40%;
+    }
+    .artistname{
+        font-size: .7rem;
+    }
+    .desc{
+        font-size: 1.2rem;
+    }
+    .info{
+        font-size: .7rem;
+    }
+    .price{
+        font-size: 1rem;
+    }
+    .days{
+        font-size: 1rem;
+    }
+    .cardfooter{
+        font-size: .9rem;
+    }
+    .cardfooter img{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .line{
+        height: 1rem;
+    }
+}
